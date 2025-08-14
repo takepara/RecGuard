@@ -1,0 +1,32 @@
+{
+  "name": "cleanfeed-recording-guard",
+  "version": "1.0.0",
+  "description": "CleanFeedで録音ボタンの押し忘れを防止するChrome拡張機能",
+  "main": "src/background.ts",
+  "scripts": {
+    "build": "tsc && npm run copy-assets",
+    "build:watch": "tsc -w",
+    "copy-assets": "cp -r src/popup/*.html src/popup/*.css my-chrome-extension/ && cp my-chrome-extension/manifest.json dist/",
+    "clean": "rm -rf dist",
+    "lint": "eslint src/**/*.ts",
+    "dev": "npm run clean && npm run build && npm run build:watch",
+    "package": "npm run clean && npm run build && cd dist && zip -r ../cleanfeed-recording-guard.zip ."
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "cleanfeed",
+    "recording",
+    "audio"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chrome": "^0.0.246",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0"
+  }
+}

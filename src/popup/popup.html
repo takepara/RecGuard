@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>CleanFeed Recording Guard</title>
+</head>
+<body>
+    <div id="popup">
+        <div class="header">
+            <h1>🎙️ Recording Guard</h1>
+            <p class="subtitle">CleanFeed録音監視ツール</p>
+        </div>
+        
+        <div class="status-section">
+            <div class="status-item">
+                <span class="label">監視状態:</span>
+                <span id="monitoring-status" class="status">待機中</span>
+            </div>
+            <div class="status-item">
+                <span class="label">録音状態:</span>
+                <span id="recording-status" class="status">未検出</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="testAlert" class="btn btn-warning">
+                ⚠️ テスト警告を表示
+            </button>
+            <button id="openCleanFeed" class="btn btn-primary">
+                🌐 CleanFeed Studioを開く
+            </button>
+        </div>
+
+        <div class="info-section">
+            <h3>使い方</h3>
+            <ul>
+                <li>CleanFeed Studio(?アカウント付き)を開くと自動で監視開始</li>
+                <li>録音していない場合、ページ上部に警告バナーが表示</li>
+                <li>警告は10秒後に自動で消えます</li>
+            </ul>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
