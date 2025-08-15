@@ -24,10 +24,6 @@ echo "📄 ファイルをコピー中..."
 # manifest.jsonをコピー
 cp cleanfeed-extension/manifest.json dist/
 
-# HTMLとCSSファイルをコピー
-cp src/popup/popup.html dist/
-cp src/popup/popup.css dist/
-
 # アイコン用ディレクトリを作成（アイコンファイルが存在する場合）
 mkdir -p dist/images
 
